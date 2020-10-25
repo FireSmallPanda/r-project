@@ -20,7 +20,7 @@ import ReactDOM from 'react-dom';
 // react 函数式组件开发
 function TickCom(props) {
     return (
-        <div class="time">
+        <div className="time">
             <h1>Hello, React!</h1>
             <h2>现在是 {props.date.toLocaleTimeString()}.</h2>
         </div>
