@@ -9,14 +9,14 @@ let borderBottom = {
     "border-top":"1px solid #000" // 字符串
 }
 let className = random ? "redBgm" : "blueBgm"
-let element = (<div >
-    <div>
-        03 jsx 和if判断
-    </div>
-    <div className={className} >
-        当前的颜色：{random ? "红色" : "蓝色"}
-    </div>
-</div>)
+// let element = (<div >
+//     <div>
+//         03 jsx 和if判断
+//     </div>
+//     <div className={className} >
+//         当前的颜色：{random ? "红色" : "蓝色"}
+//     </div>
+// </div>)
 // css 
 let element2 = (
 
