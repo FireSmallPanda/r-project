@@ -10,7 +10,7 @@ class TabBtn extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            btnValue: "1"
+            btnValue: "1" // 按钮的value
         }
     }
     componentDidMount() {
