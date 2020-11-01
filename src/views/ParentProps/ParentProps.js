@@ -10,7 +10,7 @@ class ParentDom extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            showText:'这是一首小时光'// 子组件显示文字
+            showText:'这是一首小时光（父元素的参数）'// 子组件显示文字
         }
     }
     componentDidMount() {
@@ -52,7 +52,7 @@ class ChildDom extends React.Component {
             <div >
                 <div >姓名:{this.props.name} </div>
                 <div>---{this.props.showContent}--- </div>
-                <div onClick={()=>this.transValue(this.state.cdata)}> 点击后传递父组件参数</div>
+                <button onClick={()=>this.transValue(this.state.cdata)}> 点击后传递父组件参数</button>
             </div>
         )
     }
