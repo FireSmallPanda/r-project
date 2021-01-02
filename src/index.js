@@ -7,6 +7,7 @@ import cCom from './views/CCom/CCom'
 import dataChange from './views/DataChange/DataChange'
 import tabBtn from './views/TabBtn/TabBtn'
 import parentProps from './views/ParentProps/ParentProps'
+import nEvent from './views/NEvent/nEvent'
 
 import App from './App';
 import * as serviceWorker from './serviceWorker';
@@ -23,6 +24,7 @@ cCom();
 dataChange();
 tabBtn();
 parentProps();
+nEvent();
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: https://bit.ly/CRA-PWA
