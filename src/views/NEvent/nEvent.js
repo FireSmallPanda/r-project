@@ -14,7 +14,7 @@ class ParentDom extends React.Component {
     render() {
         return (
             <div>
-                <h1>以下是事件点击书写</h1>
+                <h1>008以下是事件点击书写</h1>
                 <form action="http://www.baidu.com">
                     <button onClick={(e)=>{ this.event(this.state.showText,e)}}>事件点击按钮</button>
                 </form>
