@@ -3,7 +3,7 @@
 import data from './data.json';
 import React from 'react';
 import ReactDOM from 'react-dom';
-
+import './data.css';
 
 class ListItem2 extends React.Component {
     constructor(props) {
@@ -48,7 +48,10 @@ let dataList = () =>{
             trendItem.data.map(numData => num += numData)
             cityItem[dataName] = num
         })
+        cityList.push(cityItem)
     });
+    console.log("当前的数据",cityList)
+    return cityList
 }
 
 // 渲染列表
@@ -56,25 +59,57 @@ class ParentDom extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            listData : [
-                { title: "《马丁》", value: "14.00元" },
-                { title: "《马修》", value: "12.00元" },
-                { title: "《马弄》", value: "15.00元" },
-                { title: "《马克》", value: "17.00元" },
-            ]
+            listData : []
         }
+        
+    }
+    componentDidMount() {
+        let data = dataList()
+        this.setState({
+            listData:data
+        })
+        console.log(this.state.listData)
+    }
+    ascData(value){
+       let sortList = this.state.listData.sort((a,b)=>{
+        if(b[value] > a[value])
+            return 1;
+        else if(b[value] < a[value])
+            return -1;
+        else
+            return 0;
+        })
+        this.setState({
+            listData:sortList
+        })
     }
     render() {
-        let list = this.state.listData.map((item,index)=>{
-            return <ListItem2 key={index} data={item} index={index} ></ListItem2>
-        })
         return (
-        <div>
-            <p>011疫情渲染列表</p>
-            <ul>
-                {list}
-            </ul>
-        </div>
+            <div>
+                <p>011疫情渲染列表</p>
+                <table className="table-data">
+                <tbody>
+                        <tr>
+                            <th onClick={(e)=>{this.ascData('name')}} >城市名称</th>
+                            <th onClick={(e)=>{this.ascData('qz')}}>累计确诊</th>
+                            <th onClick={(e)=>{this.ascData('zy')}} >治愈</th>
+                            <th onClick={(e)=>{this.ascData('sw')}}>死亡</th>
+                            <th onClick={(e)=>{this.ascData('xzqz')}}>新增确诊</th>
+                        </tr>
+                        {
+                            this.state.listData.map((item,index) => {
+                               return (<tr key={index} className={'table-row ' + (index%2===1?'row-gray':'') } >
+                                   <td>{item.name}</td>
+                                    <td>{item.qz}</td>
+                                    <td>{item.zy}</td>
+                                    <td>{item.sw}</td>
+                                    <td>{item.xzqz}</td>
+                                </tr>)
+                            })
+                        }
+                    </tbody>
+                </table>
+            </div>
         )
     }
 }
