@@ -50,7 +50,6 @@ let dataList = () =>{
         })
         cityList.push(cityItem)
     });
-    console.log("当前的数据",cityList)
     return cityList
 }
 
@@ -68,7 +67,6 @@ class ParentDom extends React.Component {
         this.setState({
             listData:data
         })
-        console.log(this.state.listData)
     }
     ascData(value){
        let sortList = this.state.listData.sort((a,b)=>{

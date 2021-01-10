@@ -32,7 +32,6 @@ let dataList = () =>{
         })
         cityList.push(cityItem)
     });
-    console.log("当前的数据",cityList)
     return cityList
 }
 
