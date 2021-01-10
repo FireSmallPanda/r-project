@@ -11,6 +11,9 @@ import nEvent from './views/NEvent/nEvent'
 import conditionalRender from './views/ConditionalRender/conditionalRender'
 import toList from './views/ToList/toList'
 import dataFromJson from './views/DataFromJson/dataFromJson'
+import map from './views/Map/map'
+import searchForm from './views/SearchForm/searchForm'
+
 
 import App from './App';
 import * as serviceWorker from './serviceWorker';
@@ -31,6 +34,8 @@ nEvent();
 conditionalRender();
 toList();
 dataFromJson();
+map();
+searchForm();
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: https://bit.ly/CRA-PWA
