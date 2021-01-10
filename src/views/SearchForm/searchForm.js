@@ -56,7 +56,7 @@ class SearchForm extends React.Component {
     render() {
         return (
             <div >
-                <h1>012React表单</h1>
+                <h1>012 React表单</h1>
                 <div>
                     <input value={this.state.value} placeholder="请输入要搜索的城市" onKeyDown={(e)=>{ this.onKeyDownEvent(e) }} onChange={(e) => { this.onChangeEvent(e) }} ></input>
                 </div>
