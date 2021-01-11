@@ -14,6 +14,7 @@ import dataFromJson from './views/DataFromJson/dataFromJson'
 import map from './views/Map/map'
 import searchForm from './views/SearchForm/searchForm'
 import sendAxios from './views/SendAxios/sendAxios'
+import useSlot from './views/useSlot/useSlot'
 
 
 import App from './App';
@@ -38,6 +39,7 @@ dataFromJson();
 map();
 searchForm();
 sendAxios();
+useSlot();
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: https://bit.ly/CRA-PWA

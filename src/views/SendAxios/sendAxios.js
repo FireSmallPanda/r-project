@@ -16,7 +16,8 @@ class SendAxios extends React.Component {
                 { text: "商品", name: "goods" },
                 { text: "列表", name: "list" },
                 { text: "时间", name: "date" },
-            ]
+            ],
+            selectTab: "goods" // 当前选中的内容
         }
     }
     componentDidMount() {
@@ -29,7 +30,7 @@ class SendAxios extends React.Component {
                 <div className="tab-list" >
                     {this.state.tabList.map((item, index) => {
                         return (
-                            <div key={index} >{item.text}</div>
+                            <div key={index} onClick={e=>{ this.setSelectTab(e,item.name) }} className={ 'tab-item '+ (this.state.selectTab == item.name ? "isActive" : "") } >{item.text}</div>
                         )
                     })}
                 </div>
@@ -43,6 +44,17 @@ class SendAxios extends React.Component {
         this.setState({
             resData: res.data
         })
+    }
+    /**
+     * 设置选中tab
+     * @param {*} e 
+     * @param {*} name 
+     */
+    setSelectTab(e,name){
+        this.setState({
+            selectTab:name
+        })
+        this.getData()
     }
 }
 export default function () {

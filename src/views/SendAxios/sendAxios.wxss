@@ -1,3 +1,9 @@
 .tab-list {
   display: flex;
 }
+.tab-list .tab-item {
+  cursor: pointer;
+}
+.tab-list .isActive {
+  background-color: blueviolet;
+}
