@@ -16,8 +16,8 @@ import searchForm from './views/SearchForm/searchForm'
 import sendAxios from './views/SendAxios/sendAxios'
 import useSlot from './views/useSlot/useSlot'
 import useRouter from './views/useRouter/useRouter'
-
-
+import useRedux from './views/useRedux/useRedux'
+import useReactRedux from './views/useReactRedux/useReactRedux'
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
@@ -42,6 +42,8 @@ searchForm();
 sendAxios();
 useSlot();
 useRouter();
+useRedux();
+useReactRedux();
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: https://bit.ly/CRA-PWA
