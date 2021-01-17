@@ -18,7 +18,9 @@ import useSlot from './views/useSlot/useSlot'
 import useRouter from './views/useRouter/useRouter'
 import useRedux from './views/useRedux/useRedux'
 import useReactRedux from './views/useReactRedux/useReactRedux'
+import useAnt from './views/UseAnt/useAnt'
 import App from './App';
+import 'antd/dist/antd.css';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
@@ -44,6 +46,7 @@ useSlot();
 useRouter();
 useRedux();
 useReactRedux();
+useAnt();
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: https://bit.ly/CRA-PWA
